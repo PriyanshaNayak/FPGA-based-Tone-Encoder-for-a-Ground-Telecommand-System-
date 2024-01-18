@@ -138,7 +138,7 @@ Virtex 4 devices feature some components. These components utilize the same inte
 
 # Block RAM in Virtex-4 
 
-Independent read and write port width selection
+Independent read and write port width selection <br>
 Byte-Wide write enable
 Cascadable Block RAM
 Optional Output Registers
