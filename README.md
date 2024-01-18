@@ -44,14 +44,14 @@ The Ground TC system is a dual-chain transmitting system with an Automatic chang
 
 # Components of Telecommand System in ITR :
 
-•	Command Centre: The command center serves as the control hub of the telecommand system. It consists of workstations, consoles, and communication equipment where operators or commanders issue commands and monitor the telecommand operations. The command center interfaces with various subsystems to send and receive command signals.
-•	Command Encoder: The command encoder is responsible for encoding high-level commands or instructions into a suitable format for transmission. It takes the commands from the command center and converts them into specific signals, tones, or digital codes that can be transmitted over the communication channel.
-•	Transmitter: The transmitter is the component that transmits the encoded command signals over the communication channel. It may utilize various communication technologies such as radio frequency (RF) transmission, satellite communication, or other wireless or wired communication mediums.               
-•	Receiver: The receiver is responsible for receiving the transmitted command signals. It may include antennas, receivers, and demodulators to capture and extract the command signals from the communication channel.
-•	Decoder: The decoder processes the received command signals and converts them back into meaningful commands or instructions. It interprets the encoded signals and provides the appropriate outputs for further action or execution.
-•	Data Processing and Control Units: These units handle data processing, command validation, and coordination of telecommand operations. They may include microcontrollers, digital signal processors (DSPs), or specialized processing units to execute command logic, perform error checking, and manage overall system operations.
-•	Telemetry and Communication Subsystems: These subsystems enable bidirectional communication between the telecommand system, and the platforms or devices being controlled. They allow for the transmission of telemetry data, status updates, and acknowledgment signals between the command center and the remote devices.
-•	Power and Signal Conditioning Units: These units provide the necessary power supply and conditioning for the telecommand system components. They may include power management systems, voltage regulators, and signal conditioning circuits to ensure proper operation of the system.
+<br> •	Command Centre: The command center serves as the control hub of the telecommand system. It consists of workstations, consoles, and communication equipment where operators or commanders issue commands and monitor the telecommand operations. The command center interfaces with various subsystems to send and receive command signals. <br>
+<br> •	Command Encoder: The command encoder is responsible for encoding high-level commands or instructions into a suitable format for transmission. It takes the commands from the command center and converts them into specific signals, tones, or digital codes that can be transmitted over the communication channel. <br>
+<br> •	Transmitter: The transmitter is the component that transmits the encoded command signals over the communication channel. It may utilize various communication technologies such as radio frequency (RF) transmission, satellite communication, or other wireless or wired communication mediums. <br>           
+<br> •	Receiver: The receiver is responsible for receiving the transmitted command signals. It may include antennas, receivers, and demodulators to capture and extract the command signals from the communication channel. <br>
+<br> •	Decoder: The decoder processes the received command signals and converts them back into meaningful commands or instructions. It interprets the encoded signals and provides the appropriate outputs for further action or execution. <br>
+<br> •	Data Processing and Control Units: These units handle data processing, command validation, and coordination of telecommand operations. They may include microcontrollers, digital signal processors (DSPs), or specialized processing units to execute command logic, perform error checking, and manage overall system operations. <br>
+<br> •	Telemetry and Communication Subsystems: These subsystems enable bidirectional communication between the telecommand system, and the platforms or devices being controlled. They allow for the transmission of telemetry data, status updates, and acknowledgment signals between the command center and the remote devices. <br>
+<br> •	Power and Signal Conditioning Units: These units provide the necessary power supply and conditioning for the telecommand system components. They may include power management systems, voltage regulators, and signal conditioning circuits to ensure proper operation of the system. <br>
 
 ## Architecture of FPGA :
 
@@ -88,7 +88,8 @@ The switching matrix is responsible for establishing the connections between the
 
 ## Features of Xilinx Virtex-4 FPGA :
 This user-programmable gate array offers a lot of features. These features include:
-Input/Output Blocks
+
+# Input/Output Blocks
 I/O blocks have an interface between the internal configurable logic and package pins. Also, IOBs are specifically enhanced for source-synchronous devices. I/O blocks have different categories like:
 <br> •	Per-bit deskew circuitry <br>
 <br> •	Output block with a DDR or SDR register <br>
@@ -110,14 +111,14 @@ Also, IOBs can support differential signaling I/O standards like:
 <br> •	BLVDS <br>
 <br> •	Differential HSTL 1.8V and 1.5V <br>
 
-# Block RAM
+## Block RAM
 The block RAM can use large, embedded storage blocks. The resources here are 18Kb true dual-port RAM blocks.
 
 # Boundary Scan
 This supports a standard technique for configuring and assessing Virtex-4 devices. Also, the boundary scan complies with IEEE standards 1532 and 1149.1.
 
 # Global clocking
-This features a lasting solution for creating high-speed clock networks. There are about twenty DCM blocks available. Also, there are about 32 global-clock MUX buffers in Virtex-4.
+This features a lasting solution for creating high-speed clock networks. There are about twenty DCM blozcks available. Also, there are about 32 global-clock MUX buffers in Virtex-4.
 
 # Configurable Logic Blocks (CLBs)
 A CLB features about four slices. Each slice comprises:
@@ -132,6 +133,27 @@ Xilinx Virtex-4 FPGA’s configuration uses some modes to load the bitstream int
 <br> •	Boundary-Scan mode <br>
 <br> •	Master Select MAP mode <br>
 <br> •	Master-serial mode <br>
+
+# Storage elements : 
+Virtex-4 FPGA slice features storage elements. These elements can be configured as level-sensitive latches or D-type flip-flops. LUT output can drive the D input through the DY or DX multiplexer. The Clock Enable, Control Signals Clock, and the Set/Reset are common to these elements. Also, there is independent polarity in all control signals.
+Any inverter on a control input becomes automatically absorbed. By default, the clock-enable signal is High. The clock enable goes to the active state if left unconnected. Furthermore, every slice features reset and set signals. The set/reset compels the storage element into the condition specified by SRLow or SRHigh.
+
+# Arithmetic Logic :
+This features an XOR gate that enables the implementation of a 2-bit full adder within a slice. Also, a dedicated GAND and FAND gate enhance the capability of multiplier implementation.
+
+# Look-Up Table :
+The two function generators in a slice feature four independent inputs each. The function generators can implement any arbitrarily defined four-input Boolean function.
+
+# Carry Logic :
+This offers fast arithmetic subtraction and addition. The CLB in Virtex-4 FPGA comprises two distinct carry chains. These chains have a height of two bits per slice. Virtex-4 device’s carry chain is running upward. You can also use the carry multiplexer and dedicated carry path to cascade function generators.
+
+# Multiplexers :
+The associated multiplexers and function generators in Virtex-4 FPGA can implement these:
+<br>•	8:1 multiplexer in two slices<br>
+<br>•	16:1 multiplexer in four slices<br>
+<br>•	4:1 multiplexer in one slice<br>
+<br>•	32:1 multiplexer in eight slices<br>
+Wide input multiplexers are carefully used in one level of logic. Also, every slice features one MUFTX multiplexer and one MUXF5 multiplexer. MUXFX multiplexer uses the MUXF8, MUXF7, and MUXF6. MUXFX can allow combining LUT of about 16 LUTs. You can implement a 2:1 multiplexer for any LUT.
 
 # Routing resources
 Virtex 4 devices feature some components. These components utilize the same interconnect scheme. Also, the timing models improve the performance of high-performance designs.
