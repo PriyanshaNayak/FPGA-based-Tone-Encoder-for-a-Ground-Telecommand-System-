@@ -72,16 +72,16 @@ The switching matrix is responsible for establishing the connections between the
 (FPGA Architecture)
 
 ## DESIGN FLOW : 
-1. Design Specification
-2. Design Entry
-3. Simulation and Verification
-4. Synthesis
-5. Place and Route
-6. Timing Analysis
-7. Bitstream Generation
-8. FPGA programming
-9. Post-Implementation Verification
-10. Iteration and Debugging
+<br> 1. Design Specification <br>
+<br> 2. Design Entry <br>
+<br> 3. Simulation and Verification <br>
+<br> 4. Synthesis <br>
+<br> 5. Place and Route <br>
+<br> 6. Timing Analysis <br>
+<br> 7. Bitstream Generation <br>
+<br> 8. FPGA programming <br>
+<br> 9. Post-Implementation Verification <br>
+<br> 10. Iteration and Debugging <br>
 
 ![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/25998758-26b2-44ad-bbd8-44b8566aeb39)
 (FPGA design flow)
@@ -90,47 +90,50 @@ The switching matrix is responsible for establishing the connections between the
 This user-programmable gate array offers a lot of features. These features include:
 Input/Output Blocks
 I/O blocks have an interface between the internal configurable logic and package pins. Also, IOBs are specifically enhanced for source-synchronous devices. I/O blocks have different categories like:
-•	Per-bit deskew circuitry
-•	Output block with a DDR or SDR register
-•	Bidirectional block
-•	Regional clocking resources and Dedicated I/O
-•	In-built data deserializer/ serializer
-•	Programmable differential or single-ended operation
+<br> •	Per-bit deskew circuitry <br>
+<br> •	Output block with a DDR or SDR register <br>
+<br> •	Bidirectional block <br>
+<br> •	Regional clocking resources and Dedicated I/O <br>
+<br> •	In-built data deserializer/ serializer <br>
+<br> •	Programmable differential or single-ended operation <br>
 IOBs provide support for these single-ended standards:
-•	GTLP and GTL
-•	LVCMOS
-•	PCI-X
-•	LVTTL
-•	PCI (66 and 33 MHz)
-•	SSTL 2.5V and 1.8V
+<br> •	GTLP and GTL <br>
+<br> •	LVCMOS <br>
+<br> •	PCI-X <br>
+<br> •	LVTTL <br>
+<br> •	PCI (66 and 33 MHz) <br>
+<br> •	SSTL 2.5V and 1.8V <br>
 Also, IOBs can support differential signaling I/O standards like:
-•	ULVDS
-•	LVDS
-•	Differential SSTL 2.5V and 1.8V
-•	BLVDS
-•	Differential HSTL 1.8V and 1.5V
+<br> •	ULVDS <br>
+<br> •	LVDS <br>
+<br> •	Differential SSTL 2.5V and 1.8V <br>
+<br> •	BLVDS <br>
+<br> •	Differential HSTL 1.8V and 1.5V <br>
 
-Block RAM
+# Block RAM
 The block RAM can use large, embedded storage blocks. The resources here are 18Kb true dual-port RAM blocks.
-Boundary Scan
+
+# Boundary Scan
 This supports a standard technique for configuring and assessing Virtex-4 devices. Also, the boundary scan complies with IEEE standards 1532 and 1149.1.
-Global clocking
+
+# Global clocking
 This features a lasting solution for creating high-speed clock networks. There are about twenty DCM blocks available. Also, there are about 32 global-clock MUX buffers in Virtex-4.
-Configurable Logic Blocks (CLBs)
+
+# Configurable Logic Blocks (CLBs)
 A CLB features about four slices. Each slice comprises:
-•	Two storage elements
-•	Large multiplexers
-•	Two function generators
-•	Arithmetic logic gates
-•	Fast carry look-ahead chain
-Configuration
+<br> •	Two storage elements <br>
+<br> •	Large multiplexers <br>
+<br> •	Two function generators <br>
+<br> •	Arithmetic logic gates <br>
+<br> •	Fast carry look-ahead chain Configuration <br>
 Xilinx Virtex-4 FPGA’s configuration uses some modes to load the bitstream into internal configuration memory. These modes include:
-•	Slave Select MAP mode.
-•	Slave-serial mode
-•	Boundary-Scan mode
-•	Master Select MAP mode.
-•	Master-serial mode
-Routing resources
+<br> •	Slave Select MAP mode <br>
+<br> •	Slave-serial mode <br>
+<br> •	Boundary-Scan mode <br>
+<br> •	Master Select MAP mode <br>
+<br> •	Master-serial mode <br>
+
+# Routing resources
 Virtex 4 devices feature some components. These components utilize the same interconnect scheme. Also, the timing models improve the performance of high-performance designs.
 
 ![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/7f569a02-e590-4bff-9885-58c1099537ee)
@@ -139,10 +142,10 @@ Virtex 4 devices feature some components. These components utilize the same inte
 # Block RAM in Virtex-4 
 
 <br> Independent read and write port width selection <br>
-Byte-Wide write enable
-Cascadable Block RAM
-Optional Output Registers
-Block RAM Port Signals
+<br> Byte-Wide write enable <br>
+<br> Cascadable Block RAM <br>
+<br> Optional Output Registers <br>
+<br> Block RAM Port Signals <br>
 
 
 
