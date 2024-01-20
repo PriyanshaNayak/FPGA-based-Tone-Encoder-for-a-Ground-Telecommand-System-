@@ -289,6 +289,7 @@ Here, we have taken 40 MHz from the system clock and divided it by 4 to make 10 
 <br> 15.	The board is connected to the Mixed Signal Oscilloscope via a BNC cable, and after clicking on Run, we can see the output of the Adder2 on the oscilloscope. <br>
 <br> 16.	The sinusoidal signal is the resultant of 3 DDS signals, and it has a breaking waveform. Smoothing filters and modulation techniques can be used to get the encoded output. <br>
 
+## Implementation Results 
 # RTL Schematic Diagram:
 
 ![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/c1bb5d01-a718-470b-b88d-b7b14135c8a8)
@@ -300,6 +301,17 @@ Here, we have taken 40 MHz from the system clock and divided it by 4 to make 10 
 # Simulation Results:
 
 ![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/a2810a18-bebd-4020-9658-f1b6d0ec1533)
+(CRO Waveform) 
+
+![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/c83ef696-62c8-4b62-9b53-87fd72a853e6)
+(Spectrum of Mixed Tones)
+
+# Design Summary : 
+
+![image](https://github.com/PriyanshaNayak/FPGA-based-Tone-Encoder-for-a-Ground-Telecommand-System-/assets/87187181/2223f691-dc4d-42b8-a0e7-a54d5a389acb)
+
+
+
 
 
 
